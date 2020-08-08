@@ -85,7 +85,7 @@ LOCAL_C_INCLUDES := \
         vendor/qcom/opensource/audio-hal/primary-hal/hal/audio_extn/
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DLKM)),true)
-  LOCAL_HEADER_LIBRARIES += audio_kernel_headers
+  LOCAL_HEADER_LIBRARIES += generated_kernel_headers
   LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/vendor/qcom/opensource/audio-kernel/include
 endif
 
@@ -201,7 +201,7 @@ LOCAL_C_INCLUDES := \
         system/media/audio_utils/include
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DLKM)),true)
-  LOCAL_HEADER_LIBRARIES += audio_kernel_headers
+  LOCAL_HEADER_LIBRARIES += generated_kernel_headers
   LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/vendor/qcom/opensource/audio-kernel/include
 endif
 
